@@ -1,0 +1,244 @@
+{% load static %}
+
+<html>
+<head>
+    <link rel="stylesheet" href="{% static '/css/css_main.css' %}">
+    <script src="{% static '/js/js_main.js' %}"></script>
+
+    <title>
+        Nutual Test
+    </title>
+
+</head>
+
+
+<body>
+<div class="app-container">
+    <section class="navigation">
+        <a href="#" class="app-link">Nutual</a>
+        <div class="navigation-links">
+            <a href="#" class="nav-link ">Casas</a>
+            <a href="#" class="nav-link active">Pisos</a>
+            <a href="#" class="nav-link">Estudios</a>
+            <a href="#" class="nav-link">Duplex</a>
+        </div>
+        <div class="nav-right-side">
+            <button class="mode-switch">
+                <svg class="sun" fill="none" stroke="#fbb046" stroke-linecap="round" stroke-linejoin="round"
+                     stroke-width="2" class="feather feather-sun" viewBox="0 0 24 24">
+                    <defs/>
+                    <circle cx="12" cy="12" r="5"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                </svg>
+                <svg class="moon" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                     stroke-width="2" class="feather feather-moon" viewBox="0 0 24 24">
+                    <defs/>
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                </svg>
+            </button>
+            <button class="profile-btn">
+                <span>Carlos Cárdenas</span>
+                <img src="https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8cHJvZmlsZXx8fHx8fDE2Mzg3NTUyODM&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=80"
+                     alt="pp">
+            </button>
+        </div>
+    </section>
+    <section class="app-actions">
+        <div class="app-actions-line">
+            <div class="search-wrapper">
+                <button class="loaction-btn">
+                    <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"
+                         viewBox="0 0 24 24">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                </button>
+                <input type="text" class="search-input" id="find_city" value="Todas">
+                <button class="search-btn" onclick="openFinder(this)">Buscar ciudad</button>
+            </div>
+            <div class="contact-actions-wrapper">
+
+                <div class="contact-actions socials">
+                    <span>Síguenos: </span>
+                    <a href="#" class="contact-link facebook">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                             viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="contact-link">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="feather feather-twitter" viewBox="0 0 24 24">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="app-main">
+        <div class="app-main-left cards-area">
+            {% for flats in flats_format %}
+            <div class="card-wrapper main-card">
+                <a class="card cardItemjs" onclick="openModal(this)" id="{{flats}}">
+                    <div class="card-image-wrapper">
+                        <img src="{{flats.img_url}}" alt="Hotel">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-text big cardText-js" value="{{flats.city}}">{{flats.city}}</div>
+                        <div class="card-text small">{{flats.address}}</div>
+                        <div class="card-text small">
+                            Precio:
+                            <span class="card-price">{{flats.total_price}} €</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+
+
+        </div>
+        <div class="app-main-right cards-area">
+            <div class="app-main-right-header">
+                <span>Últimas propiedades</span>
+                <a href="#">Ver todos</a>
+            </div>
+
+            {% for flats in flats_format %}
+            <div class="card-wrapper main-card">
+                <a class="card cardItemjs" value="{{flats.city}}" onclick="openModal(this)" id="{{flats}}">
+                    <div class="card-image-wrapper">
+                        <img src="{{flats.img_url}}">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-text big cardText-js2">{{flats.city}}</div>
+                        <div class="card-text small">{{flats.address}}</div>
+                        <div class="card-text small">
+                            Precio:
+                            <span class="card-price">{{flats.total_price}} €</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+
+
+        </div>
+    </section>
+</div>
+
+<div id="modal-window" class="shadow">
+    <div class="main-modal">
+        <div class="modal-left">
+            <div class="modal-image-wrapper">
+                <img src="" id="id_img">
+            </div>
+            <div class="modal-info-header">
+                <div class="left-side">
+                    <h1 class="modalHeader-js"></h1>
+                    <p id="id_city"></p>
+                </div>
+                <div class="right-side">
+                    Precio:
+                    <span id="id_total_price" class="amount"></span>
+                </div>
+            </div>
+            <div class="info-bar">
+                <div class="info-wrapper">
+                    <div class="info-icon">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <span id="id_street"></span>
+                </div>
+
+                <div class="info-wrapper">
+                    <div class="info-icon">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <span id="id_total_area"></span>
+                </div>
+                <div class="info-wrapper">
+                    <div class="info-icon">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <span id="id_elevator"></span>
+                </div>
+            </div>
+            <div class="desc-wrapper">
+                <div class="modal-info-header">
+                    <h1>Características: </h1>
+                    <p id="id_description">
+                    </p>
+                </div>
+                <div class="desc-actions">
+                    <button class="btn-book">Contactar</button>
+                    <div class="add-favourite">
+                        <input type="checkbox" id="favourite">
+                        <label for="favourite">
+              <span class="favourite-icon">
+                <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="feather feather-heart"><path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </span>
+                            <span>Añadir a favoritos</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-right">
+            <div class="app-main-right-header">
+                <span>Valor medio ciduades</span>
+                <a href="#">Ver todas</a>
+            </div>
+
+            {% for city in ciudades %}
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="profile-info-wrapper">
+                        <div class="profile-img-wrapper">
+                            <img src="https://source.unsplash.com/featured/1200x900/?city,{{city.ciudad}}" alt="Review">
+                        </div>
+                        <p>{{city.ciudad}}</p>
+                    </div>
+                    <p>El precio medio por metro cuadrado en la ciudad de {{city.ciudad}} es de {{city.precio}}
+                        euros</p>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        <button class="btn btn-close" onclick="closeM()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="feather feather-x">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+    </div>
+</div>
+<script>
+  let ini= document.querySelector('#modal-window');
+  ini.classList.add("hideModal");
+
+</script>
+</body>
+</html>

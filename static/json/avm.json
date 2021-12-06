@@ -1,0 +1,54 @@
+[
+   {
+      "id": 1,
+      "address": "Carrer de Pau Alsina 10, Principal A",
+      "latitude": 41.410610,
+      "longitude": 2.161880,
+      "zipcode": "08025",
+      "city": "Barcelona",
+      "year_of_construction": 1900,
+      "total_price": 450000,
+      "total_area": 83,
+      "price_m2": 5421,
+      "has_elevator": true,
+      "valuation_date": "10/09/2021",
+      "year_of_renovation": 2020,
+      "img_url": "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8aG91c2V8fHx8fHwxNjM4NzQyMTEz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200"
+
+  },
+  {
+      "id": 2,
+      "address": "Plaza de España num 10 2D",
+      "latitude": 41.410610,
+      "longitude": 2.161880,
+      "zipcode": "70005",
+      "city": "Madrid",
+      "year_of_construction": 1800,
+      "total_price": 250000,
+      "total_area": 53,
+      "price_m2": 3421,
+      "has_elevator": false,
+      "valuation_date": "15/07/2021",
+      "year_of_renovation": 2019,
+      "img_url": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8aG91c2V8fHx8fHwxNjM4NzQ0NzE5&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200"
+
+  },
+  {
+      "id": 3,
+      "address": "Calle Elvira de Hidalgo 10, 2D",
+      "latitude": 41.410610,
+      "longitude": 2.161880,
+      "zipcode": "50004",
+      "city": "Zaragoza",
+      "year_of_construction": 1700,
+      "total_price": 350000,
+      "total_area": 153,
+      "price_m2": 3421,
+      "has_elevator": true,
+      "valuation_date": "15/03/2021",
+      "year_of_renovation": 2020,
+      "img_url": "https://images.unsplash.com/photo-1599427303058-f04cbcf4756f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8aG91c2V8fHx8fHwxNjM4NzQ0ODMy&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=900"
+
+
+  }
+]

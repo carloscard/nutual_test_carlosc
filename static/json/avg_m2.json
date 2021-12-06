@@ -1,0 +1,256 @@
+
+[
+  {
+    "ciudad":"San Sebastián",
+    "precio": 3947
+  },
+  {
+    "ciudad":"Barcelona",
+    "precio": 3309
+  },
+  {
+    "ciudad":"Madrid",
+    "precio": 3097
+  },
+  {
+    "ciudad":"Bilbao",
+    "precio": 2427
+  },
+  {
+    "ciudad":"Palma de Mallorca",
+    "precio": 2276
+  },
+  {
+    "ciudad":"Cádiz",
+    "precio": 2059
+  },
+  {
+    "ciudad":"Vitoria",
+    "precio": 1978
+  },
+  {
+    "ciudad":"Ceuta",
+    "precio": 1823
+  },
+  {
+    "ciudad":"Málaga",
+    "precio": 1804
+
+  },
+  {
+    "ciudad":"Gerona",
+    "precio": 1786
+
+  },
+  {
+    "ciudad":"Sevilla",
+    "precio": 1785
+
+  },
+  {
+    "ciudad":"Melilla",
+    "precio": 1779
+
+  },
+  {
+    "ciudad":"La Coruña",
+    "precio": 1726
+
+  },
+  {
+    "ciudad":"Santander",
+    "precio": 1707
+
+  },
+  {
+    "ciudad":"Pamplona",
+    "precio": 1640
+
+  },
+  {
+    "ciudad":"Las Palmas",
+    "precio": 1540
+
+  },
+  {
+    "ciudad":"Granada",
+    "precio": 1607
+
+  },
+  {
+    "ciudad":"Valencia",
+    "precio": 1503
+
+  },
+  {
+    "ciudad":"Vigo",
+    "precio": 1498
+
+  },
+  {
+    "ciudad":"Salamanca",
+    "precio": 1433
+
+  },
+  {
+    "ciudad":"Alicante",
+    "precio": 1404
+
+  },
+  {
+    "ciudad":"Santa Cruz de Tenerife",
+    "precio": 1396
+
+  },
+  {
+    "ciudad":"Zaragoza",
+    "precio": 1364
+
+  },
+  {
+    "ciudad":"Tarragona",
+    "precio": 1379
+
+  },
+  {
+    "ciudad":"Oviedo",
+    "precio": 1367
+
+  },
+  {
+    "ciudad":"Córdoba",
+    "precio": 1318
+
+  },
+  {
+    "ciudad":"Segovia",
+    "precio": 1272
+
+  },
+  {
+    "ciudad":"Valladolid",
+    "precio": 1242
+
+  },
+  {
+    "ciudad":"Toledo",
+    "precio": 1234
+
+  },
+  {
+    "ciudad":"Guadalajara",
+    "precio": 1232
+
+  },
+  {
+    "ciudad":"Burgos",
+    "precio": 1230
+
+  },
+  {
+    "ciudad":"Pontevedra",
+    "precio": 1213
+
+  },
+  {
+    "ciudad":"Almería",
+    "precio": 1154
+
+  },
+  {
+    "ciudad":"Murcia",
+    "precio": 1141
+
+  },
+  {
+    "ciudad":"Huesca",
+    "precio": 1126
+
+  },
+  {
+    "ciudad":"Badajoz",
+    "precio": 1118
+
+  },
+  {
+    "ciudad":"León",
+    "precio": 1111
+
+  },
+  {
+    "ciudad":"Huelva",
+    "precio": 1108
+
+  },
+  {
+    "ciudad":"Logroño",
+    "precio": 1092
+
+  },
+  {
+    "ciudad":"Cuenca",
+    "precio": 1078
+
+  },
+  {
+    "ciudad":"Jaén",
+    "precio": 1073
+
+  },
+  {
+    "ciudad":"Albacete",
+    "precio": 1072
+
+  },
+  {
+    "ciudad":"Zamora",
+    "precio": 1062
+
+  },
+  {
+    "ciudad":"Lérida",
+    "precio": 1049
+
+  },
+  {
+    "ciudad":"Teruel",
+    "precio": 1022
+
+  },
+  {
+    "ciudad":"Ávila",
+    "precio": 1015
+
+  },
+  {
+    "ciudad":"Orense",
+    "precio": 1004
+
+  },
+  {
+    "ciudad":"Castellón",
+    "precio": 983
+
+  },
+  {
+    "ciudad":"Ciudad Real",
+    "precio": 950
+
+  },
+  {
+    "ciudad":"Soria",
+    "precio": 932
+
+  },
+  {
+    "ciudad":"Palencia",
+    "precio": 937
+
+  },
+  {
+    "ciudad":"Lugo",
+    "precio": 930
+
+  }
+
+]
